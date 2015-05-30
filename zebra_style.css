@@ -1,0 +1,35 @@
+svg {
+	margin: auto;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	position: fixed;
+}
+
+.path {
+	stroke-dashoffset:1940;
+	stroke-dasharray:1940;
+	animation: draw 100s linear;
+	animation-play-state: paused;
+	/*animation: draw 30s linear infinite;*/
+	fill-opacity: 0;
+}
+
+@keyframes draw {
+	30%{fill-opacity: 0;}
+	31%{fill-opacity: 1;}
+	32%{fill-opacity: 0;}
+	33%{fill-opacity: 1;}
+	34%{fill-opacity: 0;}
+	35%{fill-opacity: 1;}
+	50%{stroke-dashoffset:0;}
+	90%{stroke-dashoffset:0; fill-opacity: 1;}
+}
+
+body {
+	height: 17500px;
+	background-color: white;
+
+}
